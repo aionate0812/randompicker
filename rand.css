@@ -1,0 +1,31 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 24px; color:#aa0f54;
+  width: 25em;
+  margin: 0 auto;
+  padding: 0.5em 0;
+
+  height: 100vh;
+
+  font-family: palatino;
+  background-color: lightseagreen;
+  font-color: goldenrod;
+  text-align: center;
+}
+
+ul { 
+  list-style-type: none;
+}
+
+button { 
+  background-color: darkseagreen;
+  font-size: 24px;
+  color: black;
+  font-family: palatino;
+
+ 
+}
