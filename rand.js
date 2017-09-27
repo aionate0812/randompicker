@@ -53,19 +53,19 @@ var titles = [
   "The Whisperer",
 ];
 
+// '#f7e100',
+// "#500000"
+//  '#fbdd45',
+// '#880000',
+//  '#780000',
 
 var colors = [
   '#cf5d47',
+  '#26A49A',
   '#ffed00',
   '#800000',
-  '#f7e100',
-  '##500000',
-  '#efed00',
-  '#780000 ',
   '#f5d245',
   '#480000',
-  '#fbdd45',
-  '#880000 ',
 ];
 
 
@@ -73,7 +73,6 @@ var colors = [
 var cur = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('hello rand.js');
 
   body = document.getElementById('body');
   header = document.getElementById('header');
@@ -107,7 +106,8 @@ var pickOnClick = function (event) {
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
     cur += 1;
-  }, 200);
+  }, 100);
+  console.log("current color cur:",colors[cur])
 }
 
 
@@ -120,11 +120,11 @@ var pairClick = function (event) {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
-      choice.innerHTML = rand + ' &#x2764; ' + randTwo
+      choice.innerHTML = rand + ' + ' + randTwo
       // return;  
     }  
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
     cur += 1;
-  }, 200);
+  }, 100);
 }
