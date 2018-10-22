@@ -1,57 +1,66 @@
-var pickButton;
-var pairButton;
-var aramButton;
-var header;
-var body;
-var choice;
-var titles;
+let pickButton;
+let pairButton;
+let aramButton;
+let header;
+let body;
+let choice;
+let titles;
 
-var students = [
+let students = [
+  "Pamela",
+  "Robert",
+  "Mielyn",
+  "Daniel",
+  "Syed",
+  "Malcom",
+  "Jorge",
+  "Victoria",
+  "Qiuyun",
+  "Srirupa",
+  "Stephanie",
+  "Vincent",
+  "Nadav",
+  "Richard",
+  "Nicole",
+  "Chuyun",
+  "Osita",
+  "Tarekul",
+  "Hervey",
+  "Anthony",
+  "Alexander",
+  "Abdel",
+  "Jennifer",
+  "Steven",
+  "Johnny",
+  "Jose",
+  "Serge",
+  "Ivy",
+  "Karan",
   "Aaron",
-  "Cedrick",
-  "Cindi",
-  "Ethan",
-  "George",
-  "Grey",
-  "Ike",
-  "Jahmaali",
-  "Jai'lyn",
-  "Jalanie",
-  "Jason",
-  "Jeremy",
-  "Joel",
-  "Jordin",
-  "Joseph",
-  "Joshua",
-  "Josiah",
-  "Kory",
-  "Lamar",
-  "Mario",
-  "Nathan",
-  "Tyquan",
-  "Tyreke",
-  "Kyle",
-  "Julien"
+  "Van",
+  "Heriberto",
+  "Erika",
+  "Kevin"
 ];
 
-var titles = [
-  "The Just",
-  "The Magnificent",
-  "The Magnanimous",
-  "The Knower of Things",
-  "The The Golden Hearted",
-  "The Clever",
-  "The Great Wit",
-  "The Kind",
-  "The Caring",
-  "The Jovial",
-  "The Courageous",
-  "Whose Friendship is Magic",
-  "Lover of Trail Mix",
-  "The Caffeinated",
-  "Lover of Brooklyn",
-  "The Whisperer",
-];
+// let titles = [
+//   "The Just",
+//   "The Magnificent",
+//   "The Magnanimous",
+//   "The Knower of Things",
+//   "The The Golden Hearted",
+//   "The Clever",
+//   "The Great Wit",
+//   "The Kind",
+//   "The Caring",
+//   "The Jovial",
+//   "The Courageous",
+//   "Whose Friendship is Magic",
+//   "Lover of Trail Mix",
+//   "The Caffeinated",
+//   "Lover of Brooklyn",
+//   "The Whisperer",
+// ];
 
 // '#f7e100',
 // "#500000"
@@ -59,7 +68,7 @@ var titles = [
 // '#880000',
 //  '#780000',
 
-var colors = [
+let colors = [
   '#cf5d47',
   '#26A49A',
   '#ffed00',
@@ -70,7 +79,7 @@ var colors = [
 
 
 
-var cur = 0;
+let cur = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -86,11 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-var pickOnClick = function (event) {
+let pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var rand = students.splice(Math.floor(Math.random() * students.length),1); 
-  var title = titles.splice(Math.floor(Math.random() * titles.length), 1);
-  var x = window.setInterval(() => {
+  let rand = students.splice(Math.floor(Math.random() * students.length),1); 
+  // let title = titles.splice(Math.floor(Math.random() * titles.length), 1);
+  let x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       body.style.backgroundColor = 'goldenrod;'
       window.clearInterval(x);
@@ -98,10 +107,8 @@ var pickOnClick = function (event) {
       if (rand[0].length % 2 === 0) {
         rand[0] = rand[0] 
       }
-      choice.innerText = (rand[0] + ' ' + title).toUpperCase() + '!'
-    
-      // return;
-      
+      choice.innerText = (rand[0])
+          
     }  
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
@@ -111,17 +118,16 @@ var pickOnClick = function (event) {
 }
 
 
-var pairClick = function (event) {
+let pairClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var rand = students.splice(Math.floor(Math.random() * students.length),1); 
-  var randTwo = students.splice(Math.floor(Math.random() * students.length),1);
+  let rand = students.splice(Math.floor(Math.random() * students.length),1); 
+  let randTwo = students.splice(Math.floor(Math.random() * students.length),1);
 
-  var x = window.setInterval(() => {
+  let x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
       choice.innerHTML = rand + ' + ' + randTwo
-      // return;  
     }  
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
