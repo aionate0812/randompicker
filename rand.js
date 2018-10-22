@@ -112,7 +112,7 @@ let pickOnClick = function (event) {
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
     cur += 1;
-  }, 100);
+  });
   console.log("current color cur:",colors[cur])
 }
 
