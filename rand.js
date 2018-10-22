@@ -1,12 +1,12 @@
-let pickButton;
-let pairButton;
-let aramButton;
-let header;
-let body;
-let choice;
-let titles;
+var pickButton;
+var pairButton;
+var aramButton;
+var header;
+var body;
+var choice;
+var titles;
 
-let students = [
+var students = [
   "Pamela",
   "Robert",
   "Mielyn",
@@ -40,27 +40,26 @@ let students = [
   "Van",
   "Heriberto",
   "Erika",
-  "Kevin"
 ];
 
-// let titles = [
-//   "The Just",
-//   "The Magnificent",
-//   "The Magnanimous",
-//   "The Knower of Things",
-//   "The The Golden Hearted",
-//   "The Clever",
-//   "The Great Wit",
-//   "The Kind",
-//   "The Caring",
-//   "The Jovial",
-//   "The Courageous",
-//   "Whose Friendship is Magic",
-//   "Lover of Trail Mix",
-//   "The Caffeinated",
-//   "Lover of Brooklyn",
-//   "The Whisperer",
-// ];
+var titles = [
+  "The Just",
+  "The Magnificent",
+  "The Magnanimous",
+  "The Knower of Things",
+  "The Golden Hearted",
+  "The Clever",
+  "The Great Wit",
+  "The Kind",
+  "The Caring",
+  "The Jovial",
+  "The Courageous",
+  "Whose Friendship is Magic",
+  "Lover of Trail Mix",
+  "The Caffeinated",
+  "Lover of Brooklyn",
+  "The Whisperer",
+];
 
 // '#f7e100',
 // "#500000"
@@ -68,7 +67,7 @@ let students = [
 // '#880000',
 //  '#780000',
 
-let colors = [
+var colors = [
   '#cf5d47',
   '#26A49A',
   '#ffed00',
@@ -79,7 +78,7 @@ let colors = [
 
 
 
-let cur = 0;
+var cur = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -95,11 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-let pickOnClick = function (event) {
+var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  let rand = students.splice(Math.floor(Math.random() * students.length),1); 
-  // let title = titles.splice(Math.floor(Math.random() * titles.length), 1);
-  let x = window.setInterval(() => {
+  var rand = students.splice(Math.floor(Math.random() * students.length),1); 
+  var title = titles.splice(Math.floor(Math.random() * titles.length), 1);
+  var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       body.style.backgroundColor = 'goldenrod;'
       window.clearInterval(x);
@@ -107,8 +106,10 @@ let pickOnClick = function (event) {
       if (rand[0].length % 2 === 0) {
         rand[0] = rand[0] 
       }
-      choice.innerText = (rand[0])
-          
+      choice.innerText = (rand[0] + ' ' + title).toUpperCase() + '!'
+    
+      // return;
+      
     }  
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
@@ -118,16 +119,17 @@ let pickOnClick = function (event) {
 }
 
 
-let pairClick = function (event) {
+var pairClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  let rand = students.splice(Math.floor(Math.random() * students.length),1); 
-  let randTwo = students.splice(Math.floor(Math.random() * students.length),1);
+  var rand = students.splice(Math.floor(Math.random() * students.length),1); 
+  var randTwo = students.splice(Math.floor(Math.random() * students.length),1);
 
-  let x = window.setInterval(() => {
+  var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
       choice.innerHTML = rand + ' + ' + randTwo
+      // return;  
     }  
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
