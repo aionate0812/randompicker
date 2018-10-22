@@ -76,8 +76,6 @@ let colors = [
   '#480000',
 ];
 
-
-
 let cur = 0;
 
 document.addEventListener('DOMContentLoaded', () => {

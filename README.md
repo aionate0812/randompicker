@@ -1,6 +1,6 @@
 ### Nights & Weekend's Random Student Generator
 
-## [LIVE DEMO!!!](https://nightsandweekend20108.netlify.com/)
+## [click here to DEMO](https://nightsandweekend20108.netlify.com/)
 
 
 ## Purpose:
