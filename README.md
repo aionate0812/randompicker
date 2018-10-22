@@ -3,7 +3,7 @@
 
 
 
-## [LIVE DEMO!!!](https://studentpicker.herokuapp.com/index.html)
+## [LIVE DEMO!!!](https://nightsandweekend20108.netlify.com/)
 
 
 ## Purpose:
